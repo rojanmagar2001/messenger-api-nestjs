@@ -65,12 +65,3 @@ services:
       - '5431:5432'
     volumes:
       - ./db/data:/var/lib/postgresql/data
-
-  postgres_admin:
-    image: dpage/pgadmin4
-    depends_on:
-      - postgres
-    env_file:
-      - .env
-    ports:
-      - '15431:80'
